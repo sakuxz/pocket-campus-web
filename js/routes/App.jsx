@@ -20,6 +20,7 @@ export default React.createClass({
                 <li><NavLink onClick={()=>{$('.button-collapse').sideNav('hide');}} to="/repos">Repos</NavLink></li>
                 <li><NavLink onClick={()=>{$('.button-collapse').sideNav('hide');}} to="/newsfeed">動態</NavLink></li>
                 <li><NavLink onClick={()=>{$('.button-collapse').sideNav('hide');}} to="/friendlist">好友</NavLink></li>
+                <li><NavLink onClick={()=>{$('.button-collapse').sideNav('hide');}} to="/profile/5">我的空間</NavLink></li>
                 <li><NavLink onClick={()=>{localStorage.removeItem("token");$('.button-collapse').sideNav('hide');}} to="/login">登出</NavLink></li>
             </ul>
         </nav>

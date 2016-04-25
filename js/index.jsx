@@ -9,6 +9,7 @@ import Login from './routes/Login'
 import NewsFeed from './routes/NewsFeed'
 import Comment from './routes/Comment'
 import FriendList from './routes/FriendList'
+import Profile from './routes/Profile'
 import { browserHistory } from 'react-router'
 const host = require('setting').host;
 
@@ -65,6 +66,7 @@ render((
       <Route path="/repos" component={Repos}/>
       <Route path="/repos/:userName/:repoName" component={Repo}/>
       <Route path="/about" component={About}/>
+      <Route path="/profile/:uid" component={Profile}/>
       <Route onEnter={toggleNewsfeedBg} onLeave={toggleNewsfeedBg} path="/newsfeed" component={NewsFeed}/>
       <Route onEnter={toggleBackBtn} onLeave={toggleBackBtn} path="/comment/:PID" component={Comment}/>
       <Route onEnter={toggleNewsfeedBg} onLeave={toggleNewsfeedBg} path="/friendlist" component={FriendList}/>

@@ -22,7 +22,7 @@ main {
   color: #FFE718 !important;
 }
 .side-nav.fixed {
-  box-shadow: 3px 0 2px 0 #316994;
+  box-shadow: 3px 0 2px 0 rgba(36, 68, 93, 0.63);
   background: rgba(52, 129, 189, 0.9);
 }
 main.container {
@@ -92,6 +92,9 @@ body.login {
   background: inherit;
   box-shadow: none;
 }
+.profile-card {
+  background-position: 0 45%;
+}
 @media only screen and (min-width : 993px) {
   .post-card {
     margin: 1.2em;
@@ -130,7 +133,7 @@ body.login {
     background-size: auto 100%;
   }
   body.newsfeed {
-    background: rgba(253,255,253,1);
+    background: rgba(252, 252, 252, 0.32);
   }
   //nav.toolbar {
   //  position: fixed;
