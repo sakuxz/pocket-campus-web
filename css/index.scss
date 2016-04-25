@@ -1,0 +1,145 @@
+@import "./anim.css";
+@import "./mstyle.css";
+@import "./mstyle_activity.css";
+@import "./mstyle_apply_form.css";
+@import "./mstyle_notify_friend.css";
+#app,
+body,
+html {
+  height: 100%;
+}
+body {
+  //background: rgba(253,255,253,1);
+  background: #F3F3F3;
+  background: rgba(243, 243, 243, 0.32);
+}
+footer,
+header,
+main {
+  padding-left: 240px;
+}
+.side-nav a.active {
+  color: #FFE718 !important;
+}
+.side-nav.fixed {
+  box-shadow: 3px 0 2px 0 #316994;
+  background: rgba(52, 129, 189, 0.9);
+}
+main.container {
+  margin-top: 5em;
+}
+nav.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.92);
+  z-index: 1000000;
+  box-shadow: 0 1px 2px 0 #636363;
+  a.nav-title {
+    color: #03A9F4;
+    font-size: 1.3em;
+    margin-left: 1em;
+  }
+  .right .nav-title i {
+    transform: translateY(3.8px);
+  }
+  .right #backbtn {
+    visibility: hidden;
+    cursor: pointer;
+  }
+  .right #backbtn.vis {
+    visibility: visible;
+  }
+  a.button-collapse {
+    line-height: 48px;
+    margin-left: 0.5em;
+    i {
+      color: #FFE610;
+      line-height: 48px;
+      font-size: 1.6em;
+    }
+  }
+}
+body.login {
+  background: url('./image/pattern.png');
+}
+.row.login {
+  width: 30%;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.68);
+  margin: 13em auto 0;
+  padding: 1.8em 17px 2.2em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  button {
+    float: right;
+    margin: 1em 1em 0;
+  }
+}
+//.login-ctn {
+//  height: 100%;
+//  background: url('./image/pattern.png');
+//  margin-bottom: 0;
+//}
+.comments .reply {
+  input {
+    width: 70%;
+  }
+  button {
+    width: 25%;
+  }
+}
+.friend-list .recommend {
+  background: inherit;
+  box-shadow: none;
+}
+@media only screen and (min-width : 993px) {
+  .post-card {
+    margin: 1.2em;
+    padding: 1.8em 2.6em 0;
+    background: white;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+    border-radius: 2px;
+    .content::after {
+      content: "";
+      box-shadow: none;
+    }
+    .content > div {
+      margin: 0.6em 0 0.3em;
+    }
+  }
+  body {
+    background: rgba(228, 228, 228, 0.28);
+  }
+  .comments .reply {
+    padding-left: 250px;
+  }
+}
+@media only screen and (max-width : 992px) {
+  footer,
+  header,
+  main {
+    padding-left: 0 !important;
+  }
+  main.container {
+    margin-top: 4.3em;
+  }
+  //.login-ctn {
+  //  background-size: auto 100%;
+  //}
+  body.login {
+    background-size: auto 100%;
+  }
+  body.newsfeed {
+    background: rgba(253,255,253,1);
+  }
+  //nav.toolbar {
+  //  position: fixed;
+  //  top: 0;
+  //  left: 0;
+  //  background: rgba(255, 255, 255, 0.92);
+  //  z-index: 1000000;
+  //}
+  //main.container {
+  //  margin-top: 4.3em;
+  //}
+}

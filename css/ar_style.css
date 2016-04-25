@@ -1,0 +1,337 @@
+@import url("anim.css");
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url('2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2') format('woff2');
+}
+* {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+//ar_menu
+* {}
+.feature-list {
+  padding: 0.5em;
+  margin: 0 0 2em;
+  box-shadow: 0px 2px 3px 0 rgba(22, 72, 22, 0.22);
+  border-radius: 2px;
+  background: white;
+}
+.feature-list h3 {
+  font-size: 1.2em;
+  margin: 0.6em 0;
+}
+.feature-list li div:first-child {
+  width: 60px;
+  float: left;
+  clear: both;
+}
+.feature-list li {
+  overflow: hidden;
+  margin: 0.5em 0;
+}
+.feature-list li img {
+  width: 100%;
+}
+.feature-list li div:nth-child(2) {
+  margin-left: 60px;
+  padding: 0em 0.8em;
+}
+.feature-list li h5 {
+  font-size: 1.2em;
+  margin: 0;
+}
+.feature-list li p {
+  font-size: 1em;
+  margin: 0;
+}
+.card.ar-menu {
+  width: 85%;
+  margin: 2em auto;
+  max-height: 140px;
+}
+.card.ar-menu img {
+  width: 100%;
+  display: block;
+}
+.card.ar-menu .filter {
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  overflow: hidden;
+}
+.card.ar-menu .filter img {
+  position: absolute;
+  bottom: 4%;
+  height: 67%;
+  right: -85%;
+  transform: rotate(10deg);
+  width: 154%;
+}
+.card.ar-menu > div {
+  position: absolute;
+  left: -15%;
+  bottom: -15%;
+  height: 150%;
+  width: 51%;
+  transform: rotate(-12deg);
+  background: rgba(0, 0, 0, 0.6);
+}
+.card.ar-menu > div h5 {
+  position: absolute;
+  right: 24%;
+  bottom: 23%;
+  color: #FFE740;
+  transform: rotate(12deg);
+  font-size: 2.5em;
+}
+.card.ar-menu > h5 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  padding: 0.6em 1.2em;
+  color: #E4C00C;
+  margin: 0;
+}
+.card.ar-menu .menu-info {
+  position: absolute;
+  right: 5%;
+  bottom: 7%;
+  color: #fff;
+  transform: rotate(12deg);
+}
+.recommend-store {
+  min-height: 272px;
+}
+.feature-block .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.swiper-container {
+  width: 100%;
+  height: 208px;
+}
+.preloader-wrapper {
+  margin: auto;
+  display: block;
+  margin-top: 3em;
+  margin-bottom: -3em;
+}
+//ar_info
+* {}
+.feature-title {
+  text-align: center;
+  display: block;
+  margin: 0.5em;
+  font-size: 1.1em;
+}
+.feature-title:after {
+  content: "";
+  display: block;
+  background: #CE0303;
+  width: 1.2em;
+  height: 2px;
+  margin: 0.1em auto 0.6em;
+}
+.feature-title.blueT:after {
+  background: rgb(0, 80, 163);
+}
+.feature-block {
+  background: white;
+  //padding-bottom: 1.3em;
+  box-shadow: 0 2px 3px #AFAFAF;
+  position: relative;
+}
+.feature-header:not(.menu) {
+  animation: slidetin-feature-header 0.6s;
+}
+
+/*.feature-header > div {
+  height: 120px;
+  display: block;
+  overflow: hidden;
+  //background: url(../image/food.jpg) fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  //height: 143px;
+}*/
+
+.feature-header {
+  box-shadow: 0 2px 3px #DDDDDD;
+}
+.feature-header > div.mask {
+  width: 100%;
+  height: 160px;
+  background: rgba(255, 255, 255, 0) !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.feature-header > .map {
+  height: 160px;
+}
+.feature-header > div:not(.map) {
+  background: white;
+  padding: 2px 2px 0;
+}
+.feature-header img {
+  width: 100%;
+}
+.feature-header h5, .feature-header p {
+  text-align: center;
+  margin: 0.2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.feature-header p {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #CACACA;
+  box-shadow: 0 2px 3px #DDDDDD;
+  color: #B7B7B7;
+}
+.feature-header p i {
+  font-size: 1.2em;
+  transform: translateY(3px);
+  margin-right: 0.3em;
+  color: #818181;
+}
+.feature-content {
+  animation: slidebin-feature-content 0.6s;
+}
+.feature-content .feature-info {
+  float: right;
+  width: 33%;
+  text-align: center;
+  margin-bottom: 0.3em;
+}
+.feature-commit {
+  padding: 0 0.4em;
+  background: rgba(208, 208, 208, 0.68);
+  clear: both;
+  box-shadow: 0 2px 2px #B5B5B5 inset;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  overflow: hidden;
+}
+.feature-commit > div {
+  width: 60px;
+  float: left;
+  overflow: hidden;
+}
+.feature-commit > div > div {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: auto;
+}
+.feature-commit > div > div img {
+  width: 100%;
+}
+.feature-commit h5 {
+  margin: 0;
+  font-size: 1em;
+  text-align: center;
+}
+.feature-commit > p {
+  margin: 0em 0.3em 0 80px;
+  padding: 0.6em 1em;
+  background: #4DA5FF;
+  clear: right;
+  position: relative;
+  border-radius: 11px;
+  color: white;
+}
+.feature-commit > p:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #4DA5FF;
+  position: absolute;
+  left: -5px;
+  top: 27%;
+  transform: rotate(45deg);
+}
+//ar_list
+* {}
+.store-list .card {
+  opacity: 0;
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.47);
+  margin: 0.6em;
+  animation: slidebin-store-list 0.5s forwards;
+  animation-timing-function: cubic-bezier(0.67, 0.02, 0.72, 1.43);
+}
+.store-list .card div:first-child {
+  float: left;
+  /* width: 80px; */
+  overflow: hidden;
+  background: #50BDFF;
+  /* padding: 7px; */
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin: 11px;
+  margin-left: 13px;
+}
+.store-list .card div:first-child img {
+  width: 80px;
+}
+.store-list .card div:nth-child(2) {
+  margin-left: 80px;
+  margin-left: 42px;
+  padding: 0.6em 0.8em;
+}
+.store-list .card div:first-child i {
+  line-height: 30px;
+  font-size: 1.2em;
+  color: white;
+}
+.store-list .card h5 {
+  font-size: 1.2em;
+  margin: 0;
+}
+.store-list .card p {
+  font-size: 1em;
+  margin: 0.5em 0 0;
+  color: #B5B5B5;
+}
+.store-list .card p i {
+  font-size: 1em;
+}
+//ar_mng_store
+* {}
+.store-item {
+  margin: 2em 1.5em;
+  background: white;
+  transition: 0.55s box-shadow;
+}
+.store-item:hover {
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.16);
+}
+.store-item .smap {
+  height: 180px;
+}
+.store-item .ctn {
+  padding: 1em 0em 1em 1.6em;
+}
+.store-item .ctn p {
+  margin: 0;
+  font-size: 1.7em;
+  margin-bottom: 7px;
+  color: #2196F3;
+}
+.store-item .ctn a.waves-effect.btn-flat {
+  float: right;
+  position: relative;
+  top: -5px;
+}
