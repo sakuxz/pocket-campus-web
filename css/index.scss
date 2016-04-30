@@ -3,6 +3,7 @@
 @import "./mstyle_activity.css";
 @import "./mstyle_apply_form.css";
 @import "./mstyle_notify_friend.css";
+@import "./step.min.css";
 #app,
 body,
 html {
@@ -11,7 +12,8 @@ html {
 body {
   //background: rgba(253,255,253,1);
   background: #F3F3F3;
-  background: rgba(243, 243, 243, 0.32);
+  transition: background 0.6s;
+  //background: rgba(243, 243, 243, 0.32);
 }
 footer,
 header,
@@ -59,9 +61,37 @@ nav.toolbar {
       font-size: 1.6em;
     }
   }
+  .side-nav li {
+    padding-left: 5.08em;
+  }
+}
+.user-info {
+  height: 115px;
+  border-bottom: 1px solid #2673AF;
+  margin-bottom: 1em;
+  box-shadow: 0 1px 0 0 #479ADA;
+  img {
+    width: 50px;
+    height: 50px;
+    margin: 2.5em auto 0.6em;
+    display: block;
+    border-radius: 50%;
+  }
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}
+.apply-list .list-applyed-mes i {
+  top: 24%;
+  left: 13px;
 }
 body.login {
   background: url('./image/pattern.png');
+  background-attachment: fixed;
+}
+body.ticket-bg {
+  background: #31628A;
 }
 .row.login {
   width: 30%;
@@ -80,6 +110,11 @@ body.login {
 //  background: url('./image/pattern.png');
 //  margin-bottom: 0;
 //}
+.fab {
+  position: fixed;
+  right: 1.5em;
+  bottom: 2.3em;
+}
 .comments .reply {
   input {
     width: 70%;
@@ -94,6 +129,23 @@ body.login {
 }
 .profile-card {
   background-position: 0 45%;
+}
+.post-form textarea {
+  height: 70vh;
+}
+.activity-list-wrapper {
+  position: relative;
+  .activity:before {
+    width: 10px;
+    height: 10px;
+    left: 23.5px;
+    box-shadow: 0 1px #E6D11F;
+  }
+}
+.activity-list-wrapper::before {
+  position: absolute;
+  top: 88px;
+  left: 28px;
 }
 @media only screen and (min-width : 993px) {
   .post-card {
@@ -115,6 +167,13 @@ body.login {
   }
   .comments .reply {
     padding-left: 250px;
+  }
+  .club-card:nth-child(even) {
+    clear: initial;
+  }
+  .club-card {
+    margin-left: 8% !important;
+    width: 23%;
   }
 }
 @media only screen and (max-width : 992px) {
@@ -145,4 +204,44 @@ body.login {
   //main.container {
   //  margin-top: 4.3em;
   //}
+}
+.ticket {
+  max-width: 380px;
+  width: 70%;
+  background: white;
+  margin: 5.5em auto;
+  padding-bottom: 2em;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 2px 5px -1px #9A9A9A;
+  box-shadow: 0 25px 50px -5px rgba(0, 0, 0, 0.27);
+}
+.ticket .title {
+  width: 100%;
+  margin: 0;
+  padding: 0.6em 1.2em;
+  font-size: 1.2em;
+  background: #729FB9;
+  background: #22AAF5;
+  color: white;
+  text-align: left;
+}
+.ticket .name {
+  padding: 1em 0 0.6em;
+  color: #2490FF;
+  text-shadow: 0 1px 3px #1E6BBB;
+  margin: 0;
+  font-size: 2em;
+}
+.ticket p {
+  margin: 0;
+  padding: 1em;
+  background: #EBEBEB;
+  overflow: hidden;
+}
+.ticket p span {
+  font-size: 1.6em;
+  margin: 0 5px;
+  text-shadow: #C2C2C2 1px 1px, #C2C2C2 2px 2px, #C2C2C2 3px 3px, #C2C2C2 4px 4px, #C2C2C2 5px 5px, #C2C2C2 6px 6px, #C2C2C2 7px 7px, #C2C2C2 8px 8px, #C2C2C2 9px 9px, #C2C2C2 10px 10px, #C2C2C2 11px 11px, #C2C2C2 12px 12px, #C2C2C2 13px 13px, #C2C2C2 14px 14px, #C2C2C2 15px 15px, #C2C2C2 16px 16px, #C2C2C2 17px 17px, #C2C2C2 18px 18px, #C2C2C2 19px 19px, #C2C2C2 20px 20px, #C2C2C2 21px 21px, #C2C2C2 22px 22px, #C2C2C2 23px 23px, #C2C2C2 24px 24px, #C2C2C2 25px 25px, #C2C2C2 26px 26px, #C2C2C2 27px 27px, #C2C2C2 28px 28px, #C2C2C2 29px 29px, #C2C2C2 30px 30px, #C2C2C2 31px 31px, #C2C2C2 32px 32px, #C2C2C2 33px 33px, #C2C2C2 34px 34px, #C2C2C2 35px 35px, #C2C2C2 36px 36px, #C2C2C2 37px 37px, #C2C2C2 38px 38px, #C2C2C2 39px 39px, #C2C2C2 40px 40px, #C2C2C2 41px 41px, #C2C2C2 42px 42px, #C2C2C2 43px 43px, #C2C2C2 44px 44px, #C2C2C2 45px 45px, #C2C2C2 46px 46px, #C2C2C2 47px 47px, #C2C2C2 48px 48px, #C2C2C2 49px 49px, #C2C2C2 50px 50px, #C2C2C2 51px 51px, #C2C2C2 52px 52px, #C2C2C2 53px 53px, #C2C2C2 54px 54px, #C2C2C2 55px 55px, #C2C2C2 56px 56px, #C2C2C2 57px 57px, #C2C2C2 58px 58px, #C2C2C2 59px 59px, #C2C2C2 60px 60px, #C2C2C2 61px 61px, #C2C2C2 62px 62px, #C2C2C2 63px 63px, #C2C2C2 64px 64px, #C2C2C2 65px 65px, #C2C2C2 66px 66px, #C2C2C2 67px 67px, #C2C2C2 68px 68px, #C2C2C2 69px 69px, #C2C2C2 70px 70px, #C2C2C2 71px 71px, #C2C2C2 72px 72px, #C2C2C2 73px 73px, #C2C2C2 74px 74px, #C2C2C2 75px 75px, #C2C2C2 76px 76px, #C2C2C2 77px 77px, #C2C2C2 78px 78px, #C2C2C2 79px 79px, #C2C2C2 80px 80px, #C2C2C2 81px 81px, #C2C2C2 82px 82px, #C2C2C2 83px 83px, #C2C2C2 84px 84px, #C2C2C2 85px 85px, #C2C2C2 86px 86px;
+  text-shadow: #D4D4D4 1px 1px, #D4D4D4 2px 2px, #D4D4D4 3px 3px, #D4D4D4 4px 4px, #D4D4D4 5px 5px, #D4D4D4 6px 6px, #D4D4D4 7px 7px, #D4D4D4 8px 8px, #D4D4D4 9px 9px, #D4D4D4 10px 10px, #D4D4D4 11px 11px, #D4D4D4 12px 12px, #D4D4D4 13px 13px, #D4D4D4 14px 14px, #D4D4D4 15px 15px, #D4D4D4 16px 16px, #D4D4D4 17px 17px, #D4D4D4 18px 18px, #D4D4D4 19px 19px, #D4D4D4 20px 20px, #D4D4D4 21px 21px, #D4D4D4 22px 22px, #D4D4D4 23px 23px, #D4D4D4 24px 24px, #D4D4D4 25px 25px, #D4D4D4 26px 26px, #D4D4D4 27px 27px, #D4D4D4 28px 28px, #D4D4D4 29px 29px, #D4D4D4 30px 30px, #D4D4D4 31px 31px, #D4D4D4 32px 32px, #D4D4D4 33px 33px, #D4D4D4 34px 34px, #D4D4D4 35px 35px, #D4D4D4 36px 36px, #D4D4D4 37px 37px, #D4D4D4 38px 38px, #D4D4D4 39px 39px, #D4D4D4 40px 40px, #D4D4D4 41px 41px, #D4D4D4 42px 42px, #D4D4D4 43px 43px, #D4D4D4 44px 44px, #D4D4D4 45px 45px, #D4D4D4 46px 46px, #D4D4D4 47px 47px, #D4D4D4 48px 48px, #D4D4D4 49px 49px, #D4D4D4 50px 50px, #D4D4D4 51px 51px, #D4D4D4 52px 52px, #D4D4D4 53px 53px, #D4D4D4 54px 54px, #D4D4D4 55px 55px, #D4D4D4 56px 56px, #D4D4D4 57px 57px, #D4D4D4 58px 58px, #D4D4D4 59px 59px, #D4D4D4 60px 60px, #D4D4D4 61px 61px, #D4D4D4 62px 62px, #D4D4D4 63px 63px, #D4D4D4 64px 64px, #D4D4D4 65px 65px, #D4D4D4 66px 66px, #D4D4D4 67px 67px, #D4D4D4 68px 68px, #D4D4D4 69px 69px, #D4D4D4 70px 70px, #D4D4D4 71px 71px, #D4D4D4 72px 72px, #D4D4D4 73px 73px, #D4D4D4 74px 74px, #D4D4D4 75px 75px, #D4D4D4 76px 76px, #D4D4D4 77px 77px, #D4D4D4 78px 78px, #D4D4D4 79px 79px, #D4D4D4 80px 80px, #D4D4D4 81px 81px, #D4D4D4 82px 82px, #D4D4D4 83px 83px, #D4D4D4 84px 84px, #D4D4D4 85px 85px, #D4D4D4 86px 86px;
 }

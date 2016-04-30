@@ -8,8 +8,18 @@ import Repo from './routes/Repo'
 import Login from './routes/Login'
 import NewsFeed from './routes/NewsFeed'
 import Comment from './routes/Comment'
+import Publish from './routes/Publish'
 import FriendList from './routes/FriendList'
 import Profile from './routes/Profile'
+import AdminClubList from './routes/AdminClubList'
+import AdminClubPage from './routes/AdminClubPage'
+import ClubList from './routes/ClubList'
+import ClubPage from './routes/ClubPage'
+import ActivityList from './routes/ActivityList'
+import Ticket from './routes/Ticket'
+import ApplyList from './routes/ApplyList'
+import ApplyProcess from './routes/ApplyProcess'
+import ApplyForm from './routes/ApplyForm'
 import { browserHistory } from 'react-router'
 const host = require('setting').host;
 
@@ -52,6 +62,10 @@ function toggleNewsfeedBg() {
 function toggleLoginBg() {
   $('body').toggleClass('login');
 }
+function toggleTicketBg() {
+  $('body').toggleClass('ticket-bg');
+  toggleBackBtn();
+}
 function toggleBackBtn() {
   setTimeout(function () {
     $('#backbtn').toggleClass('vis');
@@ -69,7 +83,18 @@ render((
       <Route path="/profile/:uid" component={Profile}/>
       <Route onEnter={toggleNewsfeedBg} onLeave={toggleNewsfeedBg} path="/newsfeed" component={NewsFeed}/>
       <Route onEnter={toggleBackBtn} onLeave={toggleBackBtn} path="/comment/:PID" component={Comment}/>
+      <Route onEnter={toggleBackBtn} onLeave={toggleBackBtn} path="/publish/:UID" component={Publish}/>
+      <Route onEnter={toggleBackBtn} onLeave={toggleBackBtn} path="/publish" component={Publish}/>
+      <Route path="/adminclublist" component={AdminClubList}/>
+      <Route onEnter={toggleBackBtn} onLeave={toggleBackBtn} path="/adminclubpage/:ADID" component={AdminClubPage}/>
+      <Route path="/clublist" component={ClubList}/>
+      <Route onEnter={toggleBackBtn} onLeave={toggleBackBtn} path="/clubpage/:CID" component={ClubPage}/>
+      <Route path="/activitylist" component={ActivityList}/>
+      <Route onEnter={toggleTicketBg} onLeave={toggleTicketBg} path="/ticket/:AID" component={Ticket}/>
       <Route onEnter={toggleNewsfeedBg} onLeave={toggleNewsfeedBg} path="/friendlist" component={FriendList}/>
+      <Route onEnter={toggleNewsfeedBg} onLeave={toggleNewsfeedBg} path="/applylist" component={ApplyList}/>
+      <Route onEnter={toggleBackBtn} onLeave={toggleBackBtn} path="/applyprocess/:APID" component={ApplyProcess}/>
+      <Route onEnter={toggleBackBtn} onLeave={toggleBackBtn} path="/applyform/:APID" component={ApplyForm}/>
     </Route>
   </Router>
 ), document.getElementById('app'))

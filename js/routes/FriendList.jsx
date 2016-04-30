@@ -3,6 +3,8 @@ const ReactDOM = require('react-dom');
 const host = require('setting').host;
 var token = require('setting').token;
 import Loader from 'loader';
+import { hashHistory } from 'react-router'
+
 
 // recommend:{
 //   name:"陳湧淵",dpt:"資工系",avatar:'./image/hamesome.jpg',sameNum:64,
@@ -170,9 +172,8 @@ var Friend = React.createClass({
     }.bind(this));
   },
   openUser: function() {
-    try {
-      PlugIn.openUser(this.props.data.UID);
-    } catch (e) {}
+    //location.hash = "/profile/"+this.props.data.UID;
+    hashHistory.push("/profile/"+this.props.data.UID);
   },
   componentDidMount:function(){
     window.addEventListener("hashchange",function(){

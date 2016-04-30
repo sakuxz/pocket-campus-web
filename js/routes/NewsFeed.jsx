@@ -5,6 +5,8 @@ var token = require('setting').token;
 const colors = require('setting').colorPattern;
 import Post from 'post';
 import Loader from 'loader';
+import Fab from 'fab';
+
 
 function getNewsFeed(){
   $.ajax({url: host+'ajax/getNewsFeedAndPosts',
@@ -50,7 +52,7 @@ export default React.createClass({
         return <Post data={e} addLikeNum={this.addLikeNum} decreaseLikeNum={this.decreaseLikeNum} idx={i} key={i} />
       }.bind(this));
     }
-    return <div>{nodes}</div>;
+    return <div>{nodes} <Fab url="/publish" icon="mode_edit" /> </div>;
   },
   expend:false,
   componentDidMount: function() {

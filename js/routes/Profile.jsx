@@ -5,6 +5,8 @@ const token = require('setting').token;
 const colors = require('setting').colorPattern;
 import Post from 'post.jsx';
 import Loader from 'loader.jsx';
+import Fab from 'fab';
+
 
 // userInfo: {
 //   name:'陳湧淵',
@@ -198,11 +200,17 @@ var Profile = React.createClass({
        });
      }.bind(this),600);
   },
-  componentDidUpdate: function(){
+  componentDidUpdate: function(nextProps){
     if(this.state.userInfo !== null && this.isEnter === false){
       this.refs.card.style.cssText += "animation: blurin 0.8s forwards;"
       this.isEnter = true;
     }
+    if(this.props.uid !== nextProps.uid)
+      this.refresh();
+  },
+  refresh: function () {
+    checkFriendStatus.call(this,this.props.uid);
+    getUserInfo.call(this,this.props.uid);
   }
 });
 
@@ -268,6 +276,13 @@ var Posts = React.createClass({
     this.setState({
       post: this.state.post
     });
+  },
+  componentDidUpdate: function(nextProps) {
+    if(this.props.uid !== nextProps.uid)
+      this.refresh();
+  },
+  refresh: function () {
+    getPost.call(this,this.props.uid);
   }
 });
 
@@ -277,6 +292,7 @@ export default React.createClass({
       <div>
         <Profile uid={this.props.params.uid} />
         <Posts uid={this.props.params.uid} />
+        <Fab url={"/publish/"+this.props.params.uid} icon="mode_edit" />
       </div>
     );
   }

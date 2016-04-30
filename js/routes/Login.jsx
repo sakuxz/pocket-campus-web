@@ -57,6 +57,7 @@ export default React.createClass({
         if(e.status){
           Materialize.toast('login success', 4000);
           localStorage.token = e.result.token;
+          localStorage.uid = e.result.uid;
           //location.hash = "/newsfeed";
           open("#/newsfeed","_self");
           location.reload();

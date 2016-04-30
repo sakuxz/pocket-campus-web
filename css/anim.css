@@ -203,12 +203,12 @@
     transform: scale(1);
   }
   to {
-    transform: scale(18);
+    transform: scale(45);
   }
 }
 @keyframes uncover {
   from {
-    transform: scale(18);
+    transform: scale(45);
   }
   to {
     transform: scale(1);
